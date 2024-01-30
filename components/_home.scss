@@ -1,0 +1,40 @@
+.home {
+  @include grid__two-columns(5rem);
+  &__image {
+    width: 100%;
+  }
+  &__content {
+    @include flex-column-direction(flex-start, stretch, 2rem);
+    .h1-heading {
+      @include h1-heading;
+      .logo__text {
+        font-weight: bolder;
+      }
+    }
+  }
+}
+.home__button {
+  margin-top: 3rem;
+  width: 25rem;
+  height: 6rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  background: $color-main;
+  position: relative;
+  color: #fff;
+  font-weight: bolder;
+  font-size: $font-size-16;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2.53rem;
+    right: 1.91rem;
+    width: 21.1829rem;
+    height: 6rem;
+    border-radius: 1rem;
+    background: rgba(245, 56, 56, 0.35);
+    filter: blur(27px);
+    z-index: -1;
+  }
+}

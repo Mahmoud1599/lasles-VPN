@@ -1,0 +1,24 @@
+.information {
+  align-self: stretch;
+  @include flex(space-between, stretch, auto);
+  height: 20rem;
+  padding: 5.5rem;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 2.5rem 5rem -1.2rem rgba(0, 0, 0, 0.25);
+  &__item {
+    @include flex(flex-start, center, 3em);
+    .info {
+      @include flex-column-direction(flex-start, center, 0.5rem);
+      &__number {
+        font-size: $font-size-25;
+        font-weight: bolder;
+      }
+      &__title {
+        color: $color-text-paragraph;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+  }
+}

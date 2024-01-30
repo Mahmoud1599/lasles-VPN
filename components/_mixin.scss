@@ -1,0 +1,96 @@
+@import "./variables";
+
+@mixin grid__two-columns($gap: 5rem) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: $gap;
+}
+@mixin grid__one-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+@mixin grid($col, $gap) {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  column-gap: $gap;
+}
+@mixin flex($justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+@mixin flex-column-direction($justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+@mixin flex-gap($gap: 0) {
+  display: flex;
+
+  gap: $gap;
+}
+
+@mixin h1-heading {
+  color: #0b132a;
+  font-size: $font-size-50;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.4;
+  max-width: 55.5rem;
+}
+@mixin h2-heading {
+  color: #0b132a;
+  font-size: $font-size-35;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.42857;
+}
+@mixin h2-heading-center {
+  color: #0b132a;
+
+  font-size: $font-size-35;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.42857;
+  max-width: 38rem;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+}
+@mixin h3-heading {
+  color: #0b132a;
+  font-size: $font-size-18;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.66667;
+}
+@mixin section__description {
+  color: #4f5665;
+  font-size: $font-size-16;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875;
+}
+@mixin section__description-center {
+  color: #4f5665;
+  font-size: $font-size-16;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875;
+  max-width: 55.5rem;
+  text-align: center;
+  justify-self: center;
+}
+@mixin link {
+  list-style: none;
+  color: #4f5665;
+  transition: 0.3s;
+  &:hover {
+    color: $color-main;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,56 @@
+.pricing {
+  @include grid(3, 5rem);
+  justify-content: center;
+  position: relative;
+  padding: 8rem 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background: $color-section-background;
+    justify-self: center;
+    z-index: -1;
+  }
+  .h2-heading,
+  .section__description {
+    grid-column: 1/-1;
+    text-align: center;
+    max-width: 55.5rem;
+    justify-self: center;
+  }
+
+  &__item {
+    margin-top: 6rem;
+    border-radius: 1rem;
+    border: 2px solid $color-grey;
+    background: $color-white;
+    height: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+    &:hover {
+      border-color: $color-shadow-orange;
+    }
+  }
+  &__icon {
+    max-width: 15rem;
+    max-height: 13.5rem;
+    margin: 4rem auto 3rem;
+  }
+  &__list {
+    @include flex-column-direction(flex-start, flex-start, 1rem);
+    margin-top: 3rem;
+    line-height: 1.5;
+    margin-bottom: auto;
+    &__item {
+      @include flex(flex-start, center, 2rem);
+    }
+  }
+  .button-up {
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,13 @@
+.feature {
+  @include grid__two-columns(17rem);
+  align-items: center;
+  &__image {
+    width: 100%;
+  }
+  &__content {
+    @include flex-column-direction(flex-start, stretch, 2rem);
+  }
+  &__item {
+    @include flex(flex-start, center, 1rem);
+  }
+}

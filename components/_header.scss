@@ -1,0 +1,46 @@
+@import "./mixin.scss";
+.header {
+  max-width: 90vw;
+  margin-top: 2rem;
+  @include flex(space-around, center, 10rem);
+  .checkbox {
+    display: none;
+  }
+  &__logo {
+    height: 3.5rem;
+    margin-right: auto;
+    order: -1;
+  }
+  &__content {
+    .navigation {
+      @include flex-gap(4rem);
+      &__item {
+        @include section__description;
+        @include link;
+      }
+    }
+  }
+  &__buttons {
+    @include flex(flex-start, center, 3rem);
+    @include section__description;
+    font-weight: bold;
+    .button-in {
+      @include link;
+    }
+  }
+}
+.button-up {
+  width: 15rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  border-radius: 5rem;
+  border: 1px solid $color-shadow-orange;
+  color: $color-shadow-orange;
+  font-size: $font-size-16;
+  transition: 0.3s;
+  font-weight: bold;
+  &:hover {
+    color: $color-white;
+    background-color: $color-shadow-orange;
+  }
+}

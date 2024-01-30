@@ -1,0 +1,37 @@
+@import "./components/variables";
+@import "./components/reset-rules";
+@import "./components/mixin.scss";
+@import "./components/header.scss";
+@import "./components/home.scss";
+@import "./components/information";
+@import "./components/feature";
+@import "./components/pricing";
+@import "./components/network";
+@import "./components/testimonial";
+@import "./components/subscribtion";
+@import "./components/footer";
+@import "./components/responsive";
+
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+  max-height: 100vh;
+  background: $color-section-background;
+  @include flex-column-direction(flex-start, stretch, 10rem);
+  z-index: -1;
+}
+.section__description {
+  @include section__description;
+}
+.section__description-center {
+  @include section__description-center;
+}
+.h2-heading {
+  @include h2-heading;
+}
+.h2-heading-center {
+  @include h2-heading-center;
+}
+.h3-header {
+  @include h3-heading;
+}
