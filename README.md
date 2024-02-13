@@ -25,7 +25,7 @@ The SCSS files are organized to maintain a clean and modular structure. Each fil
 @import 'header';
 @import 'footer';
 ```
-Explore the live version of the dashboard [here](https://mahmoud1599.github.io/cards-personal-profile/).
+Explore the live version of the dashboard [here]((https://mahmoud1599.github.io/lasles-VPN/)).
 
 Lasels VPN is developed by Mahmoud Abdelsalam. 
 
